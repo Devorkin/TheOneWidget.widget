@@ -1,4 +1,7 @@
 # The One Widget
+
++ Credits:
+- By: wyattsmcall1 / Repo name: theonewidget, Ref: https://github.com/wyattsmcall1/theonewidget
 TheOneWidget - Epic Sidebar for Übersicht
 
 This widget contains a sidebar composed of several popular Übersicht widgets, edited with various style modifications, and bug fixes. 
