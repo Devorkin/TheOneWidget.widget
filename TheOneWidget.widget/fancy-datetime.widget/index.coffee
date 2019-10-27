@@ -16,9 +16,9 @@
 # Widget Settings
 settings =
     lang: 'en'
-    militaryTime: false
+    militaryTime: true
     colors:
-      default: 'rgba(255, 255, 255, .75)'
+      default: 'rgba(0, 0, 0, .75)'
       accent: 'rgba(255, 255, 255, .75)'
       background: 'rgba(255, 255, 255, .1)'
     shadows:
@@ -84,8 +84,8 @@ locale: locale
 refreshFrequency: 1000
 
 style: """
-  top: 922px
-  left: 207px
+  top: 10%
+  left: 70%
   font-family: 'Ubuntu', sans-serif
   font-size: 6px
   line-height: 1
@@ -95,10 +95,10 @@ style: """
   .container
     position: relative
     display: table
-    height: 114px
-    padding: 1px 2px
-    width: 393px
-    border-radius: 5px
+    height: 100%
+    padding: 1rem 1rem
+    width: 26rem
+    border-radius: 1rem
     background: #{ settings.colors.background }
     box-shadow: #{ settings.shadows.box }
     text-shadow: #{ settings.shadows.text }
@@ -121,18 +121,18 @@ style: """
     color: #{ settings.colors.accent }
 
   .txt-small
-    font-size: 25px
+    font-size: 2rem
     font-weight: 500
 
   .txt-large
-    font-size: 60px
+    font-size: 4rem
     font-weight: 700
 
   .divider
     display: block
-    width: 2px
+    width: 0.5rem
     height: 100%
-    margin: 0 1px
+    margin: 0 1rem
     background: #{ settings.colors.accent }
     box-shadow: #{ settings.shadows.text }
     border-radius 5px
