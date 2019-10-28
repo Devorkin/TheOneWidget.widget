@@ -1,3 +1,4 @@
 Disabled-Widgets
 .DS_Store
 TheOneWidget.widget/.DS_Store
+TheOneWidget.widget/network-throughput.widget/lib/network.out
