@@ -38,29 +38,29 @@ style: """
 
   // Statistics text settings
   color #fff
-  font-family Helvetica Neue
+  font-family Hack Nerd Font
   background rgba(#FFF, .1)
   padding 10px 10px 15px
   border-radius 5px
 
-  .container
+  .DiskUsageContainer
     width: 300px
     text-align: widget-align
     position: relative
     clear: both
 
-  .container:not(:first-child)
+  .DiskUsageContainer:not(:first-child)
     margin-top: 20px
 
-  .widget-title
+  .DiskUsageWidget-title
     text-align: widget-align
 
-  .stats-container
+  .DiskUsageStats-container
     margin-bottom 5px
     border-collapse collapse
 
   td
-    font-size: 14px
+    font-size: 13px
     font-weight: 300
     color: rgba(#fff, .9)
     text-shadow: 0 1px 0px rgba(#000, .7)
@@ -69,17 +69,16 @@ style: """
   td.pctg
     float: right
 
-  .widget-title, p
-    font-size 10px
+  .DiskUsageWidget-title, p
+    font-size 13px
+    text-transform uppercase
+
+  .DiskUsageLabel
+    font-size 13px
     text-transform uppercase
     font-weight bold
 
-  .label
-    font-size 8px
-    text-transform uppercase
-    font-weight bold
-
-  .bar-container
+  .DiskUsageBar-container
     width: 100%
     height: bar-height
     border-radius: bar-height
@@ -89,24 +88,24 @@ style: """
     position: absolute
     margin-bottom: 5px
 
-  .bar
+  .DiskUasgeBar
     height: bar-height
     float: widget-align
     transition: width .2s ease-in-out
 
-  .bar:first-child
+  .DiskUasgeBar:first-child
     if widget-align == left
       border-radius: bar-height 0 0 bar-height
     else
       border-radius: 0 bar-height bar-height 0
 
-  .bar:last-child
+  .DiskUasgeBar:last-child
     if widget-align == right
       border-radius: bar-height 0 0 bar-height
     else
       border-radius: 0 bar-height bar-height 0
 
-  .bar-used
+  .DiskUsageBar-used
     background: rgba(#c00, .5)
 """
 
@@ -115,22 +114,22 @@ humanize: (sizeString) ->
 
 
 renderInfo: (total, used, free, pctg, name) -> """
-  <div class="container">
-    <div class="widget-title">#{name} #{@humanize(total)}</div>
-    <table class="stats-container" width="100%">
+  <div class="DiskUsageContainer">
+    <div class="DiskUsageWidget-title">#{name} #{@humanize(total)}</div>
+    <table class="DiskUsageStats-container" width="100%">
       <tr>
         <td class="stat"><span class="used">#{@humanize(used)}</span></td>
         <td class="stat"><span class="free">#{@humanize(free)}</span></td>
         <td class="stat pctg"><span class="pctg">#{pctg}</span></td>
       </tr>
       <tr>
-        <td class="label">used</td>
-        <td class="label">free</td>
-        <td class="label pctg">full</td>
+        <td class="DiskUsageLabel">used</td>
+        <td class="DiskUsageLabel">free</td>
+        <td class="DiskUsageLabel pctg">full</td>
       </tr>
     </table>
-    <div class="bar-container">
-      <div class="bar bar-used" style="width: #{pctg}"></div>
+    <div class="DiskUsageBar-container">
+      <div class="DiskUasgeBar DiskUsageBar-used" style="width: #{pctg}"></div>
     </div>
   </div>
 """
