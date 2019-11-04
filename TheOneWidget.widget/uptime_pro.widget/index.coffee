@@ -81,7 +81,7 @@ style: """
     font-weight: 400
     opacity: #{opacityLevel}
     padding: 6px 6px 10px 6px
-    width: 118px
+    width: 123px
     
     &:after
       content: 'uptime'
