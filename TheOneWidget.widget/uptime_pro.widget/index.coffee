@@ -66,11 +66,11 @@ command: "uptime | awk '{ if ((/day/ && /hr/) || (/day/ && /min/) || (/day/ && /
 refreshFrequency: 60000
 
 style: """
-  top:	835px
-  left:	10px
-  font-family: Hack Nerd Font
   color: #{uptimeColor}
-
+  font-family: Hack Nerd Font
+  left:	10px
+  top:	86%
+  
   div
     display: block
     border: 0px solid #{lineColor}

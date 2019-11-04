@@ -6,24 +6,27 @@ command: "iostat -dw #{delay} -c 2  #{disk} | awk 'FNR>3' | awk '{printf \"%s,%s
 refreshFrequency: delay*1000
 
 style: """
-    top: 715px
-    left: 10px
     color: #fff
-    font-family: Helvetica Neue
+    font-family: Hack Nerd Font
+    left: 10px
+    top: 70%
+    
+    
+    
 
     table
       border-collapse: collapse
       table-layout: fixed
 
       &:after
-        content: 'iostats'
+        content: 'IO stats:'
         position: absolute
         left: 0
         top: -14px
-        font-size: 10px
+        font-size: 13px
 
     td
-      font-size: 12px
+      font-size: 16px
       font-weight: 100
       width: 130px
       max-width: 130px
@@ -49,7 +52,7 @@ style: """
     p
       padding: 0
       margin: 0
-      font-size: 11px
+      font-size: 12px
       font-weight: normal
       max-width: 100%
       color: #ddd

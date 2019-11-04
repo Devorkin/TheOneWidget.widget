@@ -48,17 +48,15 @@ update: (output, domEl) ->
 
   text.text(charge + '%')
 
-
-
 style: """
-    main = rgba(#fff,1)
     color: main
-    scale = .9
-    opacity = .7
-
-    top: 825px
-    left: 180px
     font-family: Hack Nerd Font
+    main = rgba(#fff,1)
+    left: 180px
+    opacity = .7
+    scale = .9
+    top: 85.75%
+
     font-size: 1em * scale
 
     svg
