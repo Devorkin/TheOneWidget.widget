@@ -55,7 +55,7 @@ style: """
   margin:0
   padding:0px
   left: 10px
-  top: 403px
+  top: 31%
   width: 210px
   background:rgba(#FFF, .1)
   border-radius:5px

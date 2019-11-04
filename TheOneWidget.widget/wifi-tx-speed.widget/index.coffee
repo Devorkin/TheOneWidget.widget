@@ -16,7 +16,7 @@ style: """
   margin:0
   padding:0px
   left: 222px
-  top: 403px
+  top: 31%
   width: 107px
   background:rgba(#FFF, .1)
   border-radius:5px
