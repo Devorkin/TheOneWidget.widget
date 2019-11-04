@@ -28,19 +28,19 @@ style: """
     overflow: hidden
     text-shadow: 0 0 1px rgba(#000, 0.5)
 
-  .value
+  .SwapUsageValue
     padding: 4px 6px 4px 6px
     position: relative
 
-  .col1
+  .SwapUsageCol1
     background: rgba(#fff, 0.1)
     border-radius 5px
 
-   .col2
+   .SwapUsageCol2
     background: rgba(#fff, 0.05)
     border-radius 5px
     
-   .col3
+   .SwapUsageCol3
     background: rgba(#fff, 0.025)
     border-radius 5px
 
@@ -60,9 +60,9 @@ render: ->
   """
   <table>
     <tr>
-      <td class='col1'></td>
-      <td class='col2'></td>
-      <td class='col3'></td>
+      <td class='SwapUsageCol1'></td>
+      <td class='SwapUsageCol2'></td>
+      <td class='SwapUsageCol3'></td>
     </tr>
   </table>
 """
@@ -72,10 +72,10 @@ update: (output, domEl) ->
   table     = $(domEl).find('table')
 
   renderProcess = (name, value) ->
-    "<div class='value'>" +
+    "<div class='SwapUsageValue'>" +
       "#{value}<p>#{name}</p>" +
     "</div>"
 
   for process, i in processes
     args = process.split(',')
-    table.find(".col#{i+1}").html renderProcess(args...)
+    table.find(".SwapUsageCol#{i+1}").html renderProcess(args...)

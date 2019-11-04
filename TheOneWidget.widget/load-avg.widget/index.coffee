@@ -27,19 +27,19 @@ style: """
       overflow: hidden
       text-shadow: 0 0 1px rgba(#000, 0.5)
 
-    .value
+    .LoadAVGValue
       padding: 4px 6px 4px 6px
       position: relative
 
-    .col1
+    .LoadAVGCol1
       background: rgba(#fff, 0.1)
       border-radius 5px
 
-    .col2
+    .LoadAVGCol2
       background: rgba(#fff, 0.05)
       border-radius 5px
  
-    .col3
+    .LoadAVGCol3
       background: rgba(#fff, 0.025)
       border-radius 5px
 
@@ -57,9 +57,9 @@ style: """
 render: -> """
   <table>
     <tr>
-      <td class='col1'></td>
-      <td class='col2'></td>
-      <td class='col3'></td>
+      <td class='LoadAVGCol1'></td>
+      <td class='LoadAVGCol2'></td>
+      <td class='LoadAVGCol3'></td>
     </tr>
   </table>
 """
@@ -69,7 +69,7 @@ update: (output, domEl) ->
   table     = $(domEl).find('table')
 
   renderValue = (load_avg, index, label) ->
-    "<div class='value'>" +
+    "<div class='LoadAVGValue'>" +
       "#{load_avg}" +
       "<p class=label> #{label}</p>" +
     "</div>"
@@ -82,4 +82,4 @@ update: (output, domEl) ->
     else if i == 2
       label = '15 Minute'
 
-    table.find(".col#{i+1}").html renderValue(value,i, label)
+    table.find(".LoadAVGCol#{i+1}").html renderValue(value,i, label)

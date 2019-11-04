@@ -1,19 +1,19 @@
 #-----------------------------------------------------------------------#
-#																		#
-# Uptime Pro for Übersicht 												#
-# 																		#
-# Created July 2018 by Mike Pennella (github.com/mpen01/uptime_pro)		#
-#																		#
-# Change the theme variable below to style the widget					#
-# THEME OPTIONS: mono, paper, color or dark	(default is color)			#
-# STYEL OPTIONS: min or full											#
-theme		= 'dark'													#
-style		= 'full'													#
-#																		#
-# POSITION WIDGET ON SCREEN												#
-pos_top		= '1300px'													#
-pos_left	= '15px'													#
-#																		#
+#																		                                    #
+# Uptime Pro for Übersicht 												                      #
+# 																		                                  #
+# Created July 2018 by Mike Pennella (github.com/mpen01/uptime_pro)		  #
+#																		                                    #
+# Change the theme variable below to style the widget					          #
+# THEME OPTIONS: mono, paper, color or dark	(default is color)			    #
+# STYEL OPTIONS: min or full											                      #
+theme		= 'dark'													                              #
+style		= 'full'													                              #
+#																		                                    #
+# POSITION WIDGET ON SCREEN												                      #
+pos_top		= '1300px'													                          #
+pos_left	= '15px'													                            #
+#																		                                    #
 #-----------------------------------------------------------------------#
 
 if theme == 'mono' || theme == 'dark'
@@ -58,9 +58,9 @@ if style == 'min'
  
 
 command: "uptime | awk '{ if ((/day/ && /hr/) || (/day/ && /min/) || (/day/ && /sec/)){ print $3, substr($4, 1, length($4)-1), $5, substr($6, 1, length($6)-1) } 
-						  else if (/day/) { print $3, substr($4, 1, length($4)-1), substr($5, 1, length($5)-1) }
-						  else if (/sec/ || /min/ || /hr/)  { print $3, substr($4, 1, length($4)-1) }
-						  else { print substr($3, 1, length($3)-1) } }' && scutil --get ComputerName"
+          else if (/day/) { print $3, substr($4, 1, length($4)-1), substr($5, 1, length($5)-1) }
+          else if (/sec/ || /min/ || /hr/)  { print $3, substr($4, 1, length($4)-1) }
+          else { print substr($3, 1, length($3)-1) } }' && scutil --get ComputerName"
 
 # Update uptime every 60 secs
 refreshFrequency: 60000
@@ -92,7 +92,7 @@ style: """
       font-weight: 500
       color: #{labelColor}
    
-  .uptime
+  .UptimeProUptime
     font-size: 16px
     font-weight: 500
     color: #{uptimeColor}
@@ -103,7 +103,7 @@ style: """
     width: 18px
     margin-bottom: -3px
     
-  .computername 
+  .UptimeProComputername
     padding: 0
     margin: 2px
     font-size: 12px
@@ -117,7 +117,7 @@ style: """
 
 render: -> """
   <div>
-  <a class='uptime'></a><p class='computername'></p></div>
+  <a class='UptimeProUptime'></a><p class='UptimeProComputername'></p></div>
 """
 
 update: (output,domEl) ->
@@ -127,8 +127,8 @@ update: (output,domEl) ->
   div			= $(domEl)
 
   if (uptime != '')
-    div.find('.uptime').html(uptime)
-    #div.find('.computername').html(computername)
+    div.find('.UptimeProUptime').html(uptime)
+    #div.find('.UptimeProComputername').html(computername)
   else
-    div.find('.computername').html('Uptime is not available')
+    div.find('.UptimeProComputername').html('Uptime is not available')
   		 

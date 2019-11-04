@@ -30,19 +30,19 @@ style: """
       overflow: hidden
       text-shadow: 0 0 1px rgba(#000, 0.5)
 
-    .value
+    .IOStatsValue
       padding: 4px 6px 4px 6px
       position: relative
 
-    .col1
+    .IOStatsCol1
       background: rgba(#fff, 0.1)
       border-radius 5px
 
-    .col2
+    .IOStatsCol2
       background: rgba(#fff, 0.05)
       border-radius 5px
  
-    .col3
+    .IOStatsCol3
       background: rgba(#fff, 0.025)
       border-radius 5px
 
@@ -60,9 +60,9 @@ style: """
 render: -> """
   <table>
     <tr>
-      <td class='col1'></td>
-      <td class='col2'></td>
-      <td class='col3'></td>
+      <td class='IOStatsCol1'></td>
+      <td class='IOStatsCol2'></td>
+      <td class='IOStatsCol3'></td>
     </tr>
   </table>
 """
@@ -75,7 +75,7 @@ update: (output, domEl) ->
 
 
   renderValue = (value, index, label) ->
-    "<div class='value'>" +
+    "<div class='IOStatsValue'>" +
       "#{value}" +
       "<p class=label> #{label}</p>" +
     "</div>"
@@ -88,4 +88,4 @@ update: (output, domEl) ->
     else if i == 2
       label = 'MB/s'
 
-    table.find(".col#{i+1}").html renderValue(value,i,label)
+    table.find(".IOStatsCol#{i+1}").html renderValue(value,i,label)

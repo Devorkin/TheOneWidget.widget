@@ -32,19 +32,19 @@ update: (output, domEl) ->
   for svc in data.service
   
     # Start building our table cell.
-    html += "<td class='service'>" 
+    html += "<td class='NetworkInfoService'>" 
     
     # If there is an IP Address, we should show the connected icon. Otherwise we show the disable icon.
     # If there is no IP Address, we show "Not Connected" rather than the missing IP Address.
     if svc.ipaddress == ''
-      html += "  <img class='icon' src='TheOneWidget.widget/NetworkInfo.widget/images/" + svc.name + "_disabled.png'/>"
-      html += "  <p class='primaryInfo'>Not Connected</p>" 
+      html += "  <img class='NetworkInfoIcon' src='TheOneWidget.widget/NetworkInfo.widget/images/" + svc.name + "_disabled.png'/>"
+      html += "  <p class='NetworkInfoPrimaryInfo'>Not Connected</p>" 
     else
-      html += "  <img class='icon' src='TheOneWidget.widget/NetworkInfo.widget/images/" + svc.name + ".png'/>"
-      html += "  <p class='primaryInfo'>" + svc.ipaddress + "</p>" 
+      html += "  <img class='NetworkInfoIcon' src='TheOneWidget.widget/NetworkInfo.widget/images/" + svc.name + ".png'/>"
+      html += "  <p class='NetworkInfoPrimaryInfo'>" + svc.ipaddress + "</p>" 
     
     # Show the Mac Address.
-    html += "  <p class='secondaryInfo'>" + svc.macaddress + "</p>"
+    html += "  <p class='NetworkInfoSecondaryInfo'>" + svc.macaddress + "</p>"
     html += "</td>"
   
   # Set our output.
@@ -60,25 +60,25 @@ style: """
   background:rgba(#FFF, .1)
   border-radius:5px
       
-  .service
+  .NetworkInfoService
     text-align:center
     padding:2px
     
-  .icon
+  .NetworkInfoIcon
     height:32px
     width:32px
     
-  .primaryInfo, .secondaryInfo
+  .NetworkInfoPrimaryInfo, .NetworkInfoSecondaryInfo
     font-family: Helvetica Neue
     padding:0px
     margin:2px
     
-  .primaryInfo
+  .NetworkInfoPrimaryInfo
     font-size:10pt
     font-weight:bold
     color: rgba(255,255,255,0.75)
     
-  .secondaryInfo
+  .NetworkInfoSecondaryInfo
     font-size:8pt
     color: rgba(255,255,255,0.75)
 """
