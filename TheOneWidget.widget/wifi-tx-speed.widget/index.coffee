@@ -21,6 +21,7 @@ style: """
   background:rgba(#FFF, .1)
   border-radius:5px
   height: 78px
+  font-family: "Hack Nerd Font"
 
   .WifiTXIcon
     height:48px
@@ -35,7 +36,6 @@ style: """
     padding: 10px
 
   .WifiTXPrimaryInfo, .WifiTXSecondaryInfo
-    font-family: Helvetica Neue
     padding: 0px
     margin: 0px
     text-align: center

@@ -6,7 +6,7 @@ style: """
   top: 770px
   left: 10px
   color: #fff
-  font-family: Helvetica Neue
+  font-family: Hack Nerd Font
 
 
   table
@@ -14,14 +14,14 @@ style: """
     table-layout: fixed
 
     &:before
-      content: 'swap'
+      content: 'Swap:'
       position: absolute
       left: 0
       top: -14px
-      font-size: 10px
+      font-size: 13px
 
   td
-    font-size: 12px
+    font-size: 16px
     font-weight: 100
     width: 130px
     max-width: 130px
@@ -47,7 +47,7 @@ style: """
   p
     padding: 0
     margin: 0
-    font-size: 11px
+    font-size: 12px
     font-weight: normal
     max-width: 100%
     color: #ddd

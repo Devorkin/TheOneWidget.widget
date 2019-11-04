@@ -66,9 +66,9 @@ command: "uptime | awk '{ if ((/day/ && /hr/) || (/day/ && /min/) || (/day/ && /
 refreshFrequency: 60000
 
 style: """
-  top:	825px
+  top:	835px
   left:	10px
-  font-family: Helvetica Neue
+  font-family: Hack Nerd Font
   color: #{uptimeColor}
 
   div
@@ -81,14 +81,14 @@ style: """
     font-weight: 400
     opacity: #{opacityLevel}
     padding: 6px 6px 10px 6px
-    width: 123px
+    width: 150px
     
     &:after
-      content: 'uptime'
+      content: 'Uptime:'
       position: absolute
       left: 0
-      top: -14px
-      font-size: 10px
+      top: -16px
+      font-size: 13px
       font-weight: 500
       color: #{labelColor}
    
@@ -105,7 +105,7 @@ style: """
     
   .UptimeProComputername
     padding: 0
-    margin: 2px
+    margin: -1px
     font-size: 12px
     font-weight: 300
     max-width: 100%

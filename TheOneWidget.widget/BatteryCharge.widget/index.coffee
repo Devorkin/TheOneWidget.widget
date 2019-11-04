@@ -57,8 +57,8 @@ style: """
     opacity = .7
 
     top: 825px
-    left: 150px
-    font-family: Helvetica Neue
+    left: 180px
+    font-family: Hack Nerd Font
     font-size: 1em * scale
 
     svg
