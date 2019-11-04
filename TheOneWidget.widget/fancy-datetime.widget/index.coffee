@@ -97,7 +97,7 @@ style: """
     display: table
     height: 100%
     padding: 1rem 1rem
-    width: 26rem
+    width: 30rem
     border-radius: 1rem
     background: #{ settings.colors.background }
     box-shadow: #{ settings.shadows.box }

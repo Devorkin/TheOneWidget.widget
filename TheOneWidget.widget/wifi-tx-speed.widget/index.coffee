@@ -34,19 +34,19 @@ style: """
     text-align:center
     padding: 10px
 
-  .primaryInfo, .secondaryInfo
+  .WifiTXprimaryInfo, .WifiTXsecondaryInfo
     font-family: Helvetica Neue
     padding: 0px
     margin: 0px
     text-align: center
     
-  .primaryInfo
+  .WifiTXprimaryInfo
     font-size:10pt
     font-weight:bold
     color: rgba(255,255,255,0.75)
     text-align: center
     
-  .secondaryInfo
+  .WifiTXsecondaryInfo
     font-size:8pt
     color: rgba(255,255,255,0.75)
     text-align: center
@@ -55,13 +55,13 @@ style: """
 render: -> """
    <div><td class='service'>
    <img class="icon" src="TheOneWidget.widget/wifi-tx-speed.widget/icon48.png">
-   <p class='primaryInfo'>WiFi Tx</p>
-   <p class='secondaryInfo'></p>
+   <p class='WifiTXprimaryInfo'>WiFi Tx</p>
+   <p class='WifiTXsecondaryInfo'></p>
    </td></div>
 """
 
 update: (output) ->
 	if(output)
-  		$('.secondaryInfo').html(output + 'Mbps')
+  		$('.WifiTXsecondaryInfo').html(output + 'Mbps')
   	else
-  		 $('.secondaryInfo').html(output + 'No WiFi')
+  		 $('.WifiTXsecondaryInfo').html(output + 'No WiFi')
