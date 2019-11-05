@@ -15,42 +15,41 @@ style: """
 
   // Statistics text settings
   color #fff
-  font-family Helvetica Neue
+  font-family Hack Nerd Font
   background rgba(#FFF, .1)
   padding 10px 10px 15px
   border-radius 5px
 
-  .container
+  .MemBarContainer
     width: 300px
     text-align: widget-align
     position: relative
     clear: both
 
-  .widget-title
+  .MemBarWidget-title
     text-align: widget-align
 
-  .stats-container
+  .MemBarStats-container
     margin-bottom 5px
     border-collapse collapse
 
   td
-    font-size: 14px
+    font-size: 13px
     font-weight: 300
     color: rgba(#fff, .9)
     text-shadow: 0 1px 0px rgba(#000, .7)
     text-align: widget-align
 
-  .widget-title
-    font-size 10px
+  .MemBarWidget-title
+    font-size 13px
+    
+
+  .MemBarLabel
+    font-size 13px
     text-transform uppercase
     font-weight bold
 
-  .label
-    font-size 8px
-    text-transform uppercase
-    font-weight bold
-
-  .bar-container
+  .MemBarBar-container
     width: 100%
     height: bar-height
     border-radius: bar-height
@@ -60,38 +59,38 @@ style: """
     position: absolute
     margin-bottom: 5px
 
-  .bar
+  .MemBarBar
     height: bar-height
     float: widget-align
     transition: width .2s ease-in-out
 
-  .bar:first-child
+  .MemBarBar:first-child
     if widget-align == left
       border-radius: bar-height 0 0 bar-height
     else
       border-radius: 0 bar-height bar-height 0
 
-  .bar:last-child
+  .MemBarBar:last-child
     if widget-align == right
       border-radius: bar-height 0 0 bar-height
     else
       border-radius: 0 bar-height bar-height 0
 
-  .bar-inactive
+  .MemBarBar-inactive
     background: rgba(#0bf, .5)
 
-  .bar-active
+  .MemBarBar-active
     background: rgba(#fc0, .5)
 
-  .bar-wired
+  .MemBarBar-wired
     background: rgba(#c00, .5)
 """
 
 
 render: -> """
-  <div class="container">
-    <div class="widget-title">Memory</div>
-    <table class="stats-container" width="100%">
+  <div class="MemBarContainer">
+    <div class="MemBarWidget-title">Memory:</div>
+    <table class="MemBarStats-container" width="100%">
       <tr>
         <td class="stat"><span class="wired"></span></td>
         <td class="stat"><span class="active"></span></td>
@@ -100,17 +99,17 @@ render: -> """
         <td class="stat"><span class="total"></span></td>
       </tr>
       <tr>
-        <td class="label">wired</td>
-        <td class="label">active</td>
-        <td class="label">inactive</td>
-        <td class="label">free</td>
-        <td class="label">total</td>
+        <td class="MemBarLabel">wired</td>
+        <td class="MemBarLabel">active</td>
+        <td class="MemBarLabel">inactive</td>
+        <td class="MemBarLabel">free</td>
+        <td class="MemBarLabel">total</td>
       </tr>
     </table>
-    <div class="bar-container">
-      <div class="bar bar-wired"></div>
-      <div class="bar bar-active"></div>
-      <div class="bar bar-inactive"></div>
+    <div class="MemBarBar-container">
+      <div class="MemBarBar MemBarBar-wired"></div>
+      <div class="MemBarBar MemBarBar-active"></div>
+      <div class="MemBarBar MemBarBar-inactive"></div>
     </div>
   </div>
 """
@@ -132,7 +131,7 @@ update: (output, domEl) ->
     usedBytes = usedPages * 4096
     percent = (usedBytes / totalBytes * 100).toFixed(1) + "%"
     $(domEl).find(".#{sel}").text usage(usedPages)
-    $(domEl).find(".bar-#{sel}").css "width", percent
+    $(domEl).find(".MemBarBar-#{sel}").css "width", percent
 
   lines = output.split "\n"
 

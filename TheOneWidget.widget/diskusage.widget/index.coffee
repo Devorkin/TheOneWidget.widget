@@ -33,7 +33,7 @@ style: """
   widget-align = left
 
   // Position this where you want
-  top: 3%
+  top: 2%
   left 10px
 
   // Statistics text settings
@@ -65,6 +65,7 @@ style: """
     color: rgba(#fff, .9)
     text-shadow: 0 1px 0px rgba(#000, .7)
     text-align: widget-align
+    width: 35%
 
   td.pctg
     float: right

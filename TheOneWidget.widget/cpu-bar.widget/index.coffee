@@ -10,7 +10,7 @@ style: """
   widget-align = left
 
   // Position this where you want
-  top: 10%
+  top: 9.5%
   left 10px
 
   // Statistics text settings
@@ -29,7 +29,7 @@ style: """
   .CPUBarWidget-title
     text-align: widget-align
 
-  .stats-container
+  .CPUBarStats-container
     margin-bottom 5px
     border-collapse collapse
 
@@ -39,8 +39,12 @@ style: """
     color: rgba(#fff, .9)
     text-shadow: 0 1px 0px rgba(#000, .7)
     text-align: widget-align
+    width: 35%
 
-  .CPUBarWidget-title
+  td.pctg
+    float: right
+
+  .CPUBarWidget-title, p
     font-size 13px
     text-transform uppercase
     font-weight bold
@@ -85,22 +89,23 @@ style: """
 
   .CPUBarBar-user
     background: rgba(#c00, .5)
+    
 """
 
 
 render: -> """
   <div class="CPUBarContainer">
-    <div class="CPUBarWidget-title">CPU</div>
-    <table class="stats-container" width="100%">
+    <div class="CPUBarWidget-title">CPU:</div>
+    <table class="CPUBarStats-container" width="100%">
       <tr>
         <td class="stat"><span class="user"></span></td>
         <td class="stat"><span class="sys"></span></td>
-        <td class="stat"><span class="idle"></span></td>
+        <td class="stat pctg"><span class="idle"></span></td>
       </tr>
       <tr>
         <td class="CPUBarLabel">user</td>
         <td class="CPUBarLabel">sys</td>
-        <td class="CPUBarLabel">idle</td>
+        <td class="CPUBarLabel pctg">idle</td>
       </tr>
     </table>
     <div class="CPUBarBar-container">
