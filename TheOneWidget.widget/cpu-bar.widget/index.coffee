@@ -11,7 +11,7 @@ style: """
 
   // Position this where you want
   top: 9.5%
-  left 10px
+  left 0.5%
 
   // Statistics text settings
   color #fff

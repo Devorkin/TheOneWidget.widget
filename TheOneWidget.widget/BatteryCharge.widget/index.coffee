@@ -52,7 +52,7 @@ style: """
     color: main
     font-family: Hack Nerd Font
     main = rgba(#fff,1)
-    left: 180px
+    left: 10%
     opacity = .7
     scale = .9
     top: 85.75%

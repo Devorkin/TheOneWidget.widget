@@ -1,5 +1,5 @@
 command: """
-    TheOneWidget.widget/network-throughput.widget/lib/network.sh
+    TheOneWidget.widget/network-bar.widget/lib/network.sh
 """
 refreshFrequency: 2000
 
@@ -12,7 +12,7 @@ style: """
 
     // Position this where you want
     top: 24.5%
-    left 10px
+    left: 0.5%
 
     // Statistics text settings
     color #fff

@@ -6,7 +6,7 @@ style: """
   border-radius:5px
   font-family: Hack Nerd Font
   height: 60px
-  left: 10px
+  left: 0.5%
   margin:0
   padding: 10px
   top: 90%

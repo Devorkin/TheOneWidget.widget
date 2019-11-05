@@ -68,7 +68,7 @@ refreshFrequency: 60000
 style: """
   color: #{uptimeColor}
   font-family: Hack Nerd Font
-  left:	10px
+  left: 0.5%
   top:	86%
   
   div

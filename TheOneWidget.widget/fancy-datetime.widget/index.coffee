@@ -89,7 +89,7 @@ style: """
   font-family: 'Ubuntu', sans-serif
   font-size: 6px
   line-height: 1
-  text-transform: uppercase
+  
   transform: translate(-50%, -50%)
 
   .container

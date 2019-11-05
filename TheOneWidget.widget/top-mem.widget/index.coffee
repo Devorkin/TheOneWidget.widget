@@ -5,7 +5,7 @@ refreshFrequency: 5000
 style: """
   color: #fff
   font-family: Hack Nerd Font
-  left: 10px
+  left: 0.5%
   top: 59%
   
   table

@@ -8,12 +8,9 @@ refreshFrequency: delay*1000
 style: """
     color: #fff
     font-family: Hack Nerd Font
-    left: 10px
+    left: 0.5%
     top: 70%
     
-    
-    
-
     table
       border-collapse: collapse
       table-layout: fixed

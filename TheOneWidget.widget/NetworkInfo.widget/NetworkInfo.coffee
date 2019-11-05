@@ -10,7 +10,8 @@
 #--------------------------------------------------------------------------------------
 
 # Execute the shell command.
-command: "TheOneWidget.widget/NetworkInfo.widget/NetworkInfo.sh"
+script.location = "TheOneWidget.widget/NetworkInfo.widget"
+command: script.location + "/NetworkInfo.sh"
 
 # Set the refresh frequency (milliseconds).
 refreshFrequency: 5000
@@ -37,10 +38,10 @@ update: (output, domEl) ->
     # If there is an IP Address, we should show the connected icon. Otherwise we show the disable icon.
     # If there is no IP Address, we show "Not Connected" rather than the missing IP Address.
     if svc.ipaddress == ''
-      html += "  <img class='NetworkInfoIcon' src='TheOneWidget.widget/NetworkInfo.widget/images/" + svc.name + "_disabled.png'/>"
+      html += "  <img class='NetworkInfoIcon' src='" + script.location + "/images/" + svc.name + "_disabled.png'/>"
       html += "  <p class='NetworkInfoPrimaryInfo'>Not Connected</p>" 
     else
-      html += "  <img class='NetworkInfoIcon' src='TheOneWidget.widget/NetworkInfo.widget/images/" + svc.name + ".png'/>"
+      html += "  <img class='NetworkInfoIcon' src='" + script.location + "/images/" + svc.name + ".png'/>"
       html += "  <p class='NetworkInfoPrimaryInfo'>" + svc.ipaddress + "</p>" 
     
     # Show the Mac Address.
@@ -54,9 +55,9 @@ update: (output, domEl) ->
 style: """
   margin:0
   padding:0px
-  left: 10px
-  top: 31%
-  width: 210px
+  left: 0.5%
+  top: 32%
+  width: 230px
   background:rgba(#FFF, .1)
   border-radius:5px
       
@@ -69,16 +70,16 @@ style: """
     width:32px
     
   .NetworkInfoPrimaryInfo, .NetworkInfoSecondaryInfo
-    font-family: Helvetica Neue
+    font-family: Hack Nerd Font
     padding:0px
     margin:2px
     
   .NetworkInfoPrimaryInfo
-    font-size:10pt
+    font-size: 13px
     font-weight:bold
     color: rgba(255,255,255,0.75)
     
   .NetworkInfoSecondaryInfo
-    font-size:8pt
+    font-size: 13px
     color: rgba(255,255,255,0.75)
 """

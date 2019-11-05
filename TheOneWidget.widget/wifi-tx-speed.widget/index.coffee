@@ -15,13 +15,13 @@ refreshFrequency: 10000
 style: """
   margin:0
   padding:0px
-  left: 222px
-  top: 31%
-  width: 107px
+  left: 12.8%
+  top: 32%
+  width: 84px
   background:rgba(#FFF, .1)
   border-radius:5px
   height: 78px
-  font-family: "Hack Nerd Font"
+  font-family: Hack Nerd Font
 
   .WifiTXIcon
     height:48px
@@ -41,13 +41,13 @@ style: """
     text-align: center
     
   .WifiTXPrimaryInfo
-    font-size:10pt
+    font-size: 13px
     font-weight:bold
     color: rgba(255,255,255,0.75)
     text-align: center
     
   .WifiTXSecondaryInfo
-    font-size:8pt
+    font-size: 13px
     color: rgba(255,255,255,0.75)
     text-align: center
 """
