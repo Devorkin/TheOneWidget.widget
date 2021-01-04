@@ -1,4 +1,4 @@
-command: "echo \"$(/Applications/\"VMware Fusion.app\"/Contents/Public/vmrun list vms | cut -d ':' -f2)\""
+command: "echo \"$(/Applications/\"VMware Fusion.app\"/Contents/Public/vmrun list vms | sed 's|Total running VMs:||' | sed 's|\/.*$||')\""
 refreshFrequency: 10000
 
 style: """
